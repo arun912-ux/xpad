@@ -436,7 +436,10 @@ static const struct xpad_device {
 	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
 	{ 0x413d, 0x2104, "Black Shark Green Ghost Gamepad", 0, XTYPE_XBOX360 },
 	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
-	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN }
+	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN },
+
+	{ 0x0281, 0x0112, "Cosmic Byte Blitz Wireless Dongle", 0, XTYPE_XBOX360 },
+	{ 0x0281, 0x0080, "Cosmic Byte Blitz Wired", 0, XTYPE_XBOX360 }
 };
 
 /* buttons shared with xbox and xbox360 */
@@ -595,6 +598,7 @@ static const struct usb_device_id xpad_table[] = {
 	XPAD_XBOX360_VENDOR(0x3537),		/* GameSir Controllers */
 	XPAD_XBOXONE_VENDOR(0x3537),		/* GameSir Controllers */
 	XPAD_XBOX360_VENDOR(0x413d),		/* Black Shark Green Ghost Controller */
+	XPAD_XBOX360_VENDOR(0x0281),		/* Cosmic Byte Blitz Tri-Mode Controller */
 	{ }
 };
 
