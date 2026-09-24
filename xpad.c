@@ -436,12 +436,7 @@ static const struct xpad_device {
 	{ 0x3767, 0x0101, "Fanatec Speedster 3 Forceshock Wheel", 0, XTYPE_XBOX },
 	{ 0x413d, 0x2104, "Black Shark Green Ghost Gamepad", 0, XTYPE_XBOX360 },
 	{ 0xffff, 0xffff, "Chinese-made Xbox Controller", 0, XTYPE_XBOX },
-	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN },
-
-	{ 0x0281, 0x0112, "Cosmic Byte Blitz V2 Wireless Dongle", 0, XTYPE_XBOX360 },
-	{ 0x0281, 0x0080, "Cosmic Byte Blitz V2 Wired", 0, XTYPE_XBOX360 },
-	{ 0x0283, 0x0001, "Cosmic Byte Blitz V1 Wireless Dongle", 0, XTYPE_XBOX360 } 
-
+	{ 0x0000, 0x0000, "Generic X-Box pad", 0, XTYPE_UNKNOWN }
 };
 
 /* buttons shared with xbox and xbox360 */
@@ -540,6 +535,8 @@ static const struct usb_device_id xpad_table[] = {
 	 */
 	{ USB_INTERFACE_INFO('X', 'B', 0) },	/* Xbox USB-IF not-approved class */
 	XPAD_XBOX360_VENDOR(0x0079),		/* GPD Win 2 controller */
+	XPAD_XBOX360_VENDOR(0x0281),		/* Cosmic Byte Blitz Tri-Mode Controller */
+	XPAD_XBOX360_VENDOR(0x0283),		/* Cosmic Byte Blitz Controller */
 	XPAD_XBOX360_VENDOR(0x03eb),		/* Wooting Keyboards (Legacy) */
 	XPAD_XBOX360_VENDOR(0x03f0),		/* HP HyperX Xbox 360 controllers */
 	XPAD_XBOXONE_VENDOR(0x03f0),		/* HP HyperX Xbox One controllers */
@@ -600,8 +597,6 @@ static const struct usb_device_id xpad_table[] = {
 	XPAD_XBOX360_VENDOR(0x3537),		/* GameSir Controllers */
 	XPAD_XBOXONE_VENDOR(0x3537),		/* GameSir Controllers */
 	XPAD_XBOX360_VENDOR(0x413d),		/* Black Shark Green Ghost Controller */
-	XPAD_XBOX360_VENDOR(0x0281),		/* Cosmic Byte Blitz Tri-Mode Controller */
-	XPAD_XBOX360_VENDOR(0x0283),		/* Cosmic Byte Blitz Controller */
 	{ }
 };
 
